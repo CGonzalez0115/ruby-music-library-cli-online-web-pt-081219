@@ -3,12 +3,20 @@ class Song
   attr_reader :artist, :genre
 
   @@all = []
+<<<<<<< HEAD
   def initialize(name, artist=nil, genre=nil)
+=======
+  def initialize(name, artist = nil, genre = nil)
+>>>>>>> 47760e9e5956042f4656137fca691601a900b480
     @name = name
     # @artist = artist
     self.artist = artist if artist
     # @genre = genre
     self.genre = genre if genre
+<<<<<<< HEAD
+=======
+    @@all << self
+>>>>>>> 47760e9e5956042f4656137fca691601a900b480
   end
 
   def self.all
@@ -38,6 +46,7 @@ class Song
     @genre = genre
     genre.songs << self if !genre.songs.include?(self)
   end
+<<<<<<< HEAD
 
   def self.find_by_name(name)
     all.detect{|song| song.name == name}
@@ -60,4 +69,6 @@ class Song
   def self.create_from_filename(filename)
     new_from_filename(filename).tap{ |s| s.save}
   end
+=======
+>>>>>>> 47760e9e5956042f4656137fca691601a900b480
 end
